@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "titolo": "film1",
+        "genere": "azione",
+        "anno": 2020,
+        "regista": "regista1",
+        "attori": ["attore1", "attore2", "attore3"],
+        "trama": "trama1",
+        "prezzo": 10.5,
+        "locandina": "locandina1.jpg"
+    },
+    {
+        "id": 2,
+        "titolo": "film2",
+        "genere": "commedia",
+        "anno": 2020,
+        "regista": "regista2",
+        "attori": ["attore1", "attore2", "attore3"],
+        "trama": "trama2",
+        "locandina":"locandina1.jpg"
+    }
+]
