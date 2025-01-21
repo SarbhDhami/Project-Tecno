@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import os
 import json
 from flask_cors import CORS
@@ -57,6 +57,11 @@ def get_film():
 def read_film():
     with open('database/film.json') as f:
         films = json.load(f)
+        
+    for film in films:
+        film.locandina = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
+        
+                
     return films
 
 # Main entry point
