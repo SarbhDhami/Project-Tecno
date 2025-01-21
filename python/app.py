@@ -6,7 +6,7 @@ import json
 template_dir = os.path.abspath('../html')
 app = Flask(__name__, template_folder=template_dir)
 app.secret_key = os.urandom(24)  # Secret key for session management
-ADMIN_PASSWORD = '1234'  # Replace with your desired admin password
+ADMIN_PASSWORD = 'admin'  # Replace with your desired admin password
 
 # Routes
 @app.route('/')
