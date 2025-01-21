@@ -6,9 +6,10 @@ ajax.onreadystatechange = function() {
     if (ajax.readyState== 4 && ajax.status == 200) {
         var response = JSON.parse(ajax.responseText);
 
-        
+
         for (var i = 0; i < response.length; i++) {
-            var film = response[i];
+            var film_obj = response[i];
+            
 
             var film = document.createElement("div");
             film.className = "film";
@@ -18,15 +19,15 @@ ajax.onreadystatechange = function() {
 
             var img = document.createElement("img");
 
-            var link_locandina = "{{ url_for('static', filename='images/films/"+film.locandina+"') }}"
 
-            img.src = link_locandina;
+            img.src = film_obj.locandina;
+            img.className = "locandina"
             banner.appendChild(img);
 
             film.appendChild(banner);
 
             var span = document.createElement("span");
-            span.innerHTML = response[i].titolo;
+            span.innerHTML = film_obj.titolo;
             film.appendChild(span);
 
             document.querySelector(".container").appendChild(film);

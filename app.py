@@ -59,10 +59,10 @@ def read_film():
         films = json.load(f)
         
     for film in films:
-        film.locandina = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
+        film["locandina"] = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
         
                 
-    return films
+    return jsonify(films)
 
 # Main entry point
 if __name__ == '__main__':
