@@ -5,17 +5,24 @@ ajax.send();
 ajax.onreadystatechange = function() {
     if (ajax.readyState== 4 && ajax.status == 200) {
         var response = JSON.parse(ajax.responseText);
-        console.log(response);
 
         
         for (var i = 0; i < response.length; i++) {
+            var film = response[i];
+
             var film = document.createElement("div");
             film.className = "film";
+
             var banner = document.createElement("div");
             banner.className = "banner";
+
             var img = document.createElement("img");
-            img.src = response[i].banner;
+
+            var link_locandina = "{{ url_for('static', filename='images/films/"+film.locandina+"') }}"
+
+            img.src = link_locandina;
             banner.appendChild(img);
+
             film.appendChild(banner);
 
             var span = document.createElement("span");
