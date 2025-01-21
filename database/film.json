@@ -238,5 +238,21 @@
         "trama": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
         "prezzo": 16.0,
         "locandina": "avatar.jpg"
+    },
+    {
+        "id": 18,
+        "titolo": "Titanic",
+        "genere": "sci-fi",
+        "anno": 2009,
+        "regista": "James Cameron",
+        "attori": [
+            "Sam Worthington",
+            "Zoe Saldana",
+            "Sigourney Weaver"
+        ],
+        "trama": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+        "prezzo": 16.0,
+        "locandina": "titanic.jpg"
     }
+
 ]
