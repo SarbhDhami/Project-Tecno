@@ -1,10 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import os
 import json
+from flask_cors import CORS
+
 
 # Configuration
-template_dir = os.path.abspath('../html')
-app = Flask(__name__, template_folder=template_dir)
+app = Flask(__name__)
+
+CORS(app)  # This will allow all domains to access your backend
 app.secret_key = os.urandom(24)  # Secret key for session management
 ADMIN_PASSWORD = 'admin'  # Replace with your desired admin password
 
@@ -41,7 +44,7 @@ def get_film():
     if film_id is None:
         return {"error": "Film ID is required"}, 400
     
-    with open('../database/film.json') as f:
+    with open('database/film.json') as f:
         films = json.load(f)
     
     film = next((film for film in films if film['id'] == film_id), None)
@@ -52,7 +55,9 @@ def get_film():
 
 @app.route('/read_film')
 def read_film():
-    return ""
+    with open('database/film.json') as f:
+        films = json.load(f)
+    return films
 
 # Main entry point
 if __name__ == '__main__':

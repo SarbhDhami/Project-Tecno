@@ -1,0 +1,55 @@
+body{
+    background-color: gray;
+    padding: 0 30px;
+}
+
+.navbar li {
+    display: inline-block;
+    max-height: 50px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    max-height: 50px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: red;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.film {
+    flex: 0 1 18%;
+    background-color: blue;
+    aspect-ratio: 4/7;
+    margin: 20px 1%; /* Adjusted margin to ensure max distance between cards is 20px */
+}
+.navbar img {
+    height: 50px;
+}
+
+/* .container {
+    background-color: red;
+    margin: 0 auto;
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+} */
+
+.banner {
+    background-color: yellow;
+    aspect-ratio: 2/3
+}
+
+/* .film {
+    background-color: blue;
+    aspect-ratio: 4/7;
+
+    width: 200px;
+    margin: 20px auto 20px;
+} */
