@@ -3,6 +3,20 @@ body{
     padding: 0 30px;
 }
 
+.navbar{
+    background-color: blueviolet;
+    width: 100%; /* Imposta la larghezza per occupare tutta la pagina */
+    height: 80px; /* Altezza rimane invariata */
+    position: fixed; /* Fissa l'elemento in alto */
+    top: 0; /* Posiziona l'elemento all'inizio della pagina */
+    left: 0; /* Assicura che parta dal lato sinistro */
+    /*
+    background-color: blueviolet;
+    width: auto;
+    height: 100px;
+    */
+}
+
 .navbar li {
     display: inline-block;
     max-height: 50px;
@@ -12,6 +26,7 @@ body{
     list-style-type: none;
     max-height: 50px;
 }
+    
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +34,7 @@ body{
     background-color: red;
     margin: 50px auto;
     max-width: 1200px;
+    margin-top: 100px;
 }
 
 .film {
@@ -45,6 +61,14 @@ body{
     background-color: yellow;
     aspect-ratio: 2/3
 }
+.logo {
+    position: fixed; /* Posiziona il logo rispetto alla finestra */
+    top: 5%; /* Posiziona il logo al 50% della finestra (verticalmente) */
+    left: 20px; /* Distanza da sinistra, come richiesto */
+    transform: translateY(-50%); /* Centra verticalmente il logo (spostato indietro della metà della sua altezza) */
+    
+}
+
 
 /* .film {
     background-color: blue;
@@ -53,3 +77,4 @@ body{
     width: 200px;
     margin: 20px auto 20px;
 } */
+
