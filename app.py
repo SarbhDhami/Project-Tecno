@@ -7,16 +7,18 @@ app = Flask(__name__)
 
 CORS(app)  # La parte JS riesce a comunicare con PY
 app.secret_key = os.urandom(24)  # Chiave segreta della sessione
-ADMIN_PASSWORD = 'admin'  # Password admin. 
+ADMIN_PASSWORD = 'admin'  # Password admin.
 app.template_folder = "html"
+
+@app.before_request
+def ensure_session_exists():
+    if "admin_logged_in" not in session:
+        session["admin_logged_in"] = False
 
 # Routes
 @app.route('/')
 def public_home():
-    if "admin_logged_in" not in session:
-        session["admin_logged_in"] = False
-        
-    if session["admin_logged_in"] == True:
+    if session["admin_logged_in"]:
         return redirect(url_for("admin_home"))
     return render_template('public/index.html')
 
@@ -31,8 +33,6 @@ def login():
             return "Invalid password ", 403
     return render_template('login.html')
 
-
-
 @app.route('/logout')
 def logout():
     session['admin_logged_in'] = False
@@ -46,55 +46,46 @@ def admin_home():
 
 @app.route('/read_film', methods=['GET'])
 def read_film():
-    #Prendo la variabile id dall'url
     film_id = request.args.get('id', None)
-    
-    #Converto il json in un dizionario python
     with open('database/film.json') as f:
         films = json.load(f)
-        
-    #Se è presente un id nell'url provo a cercarlo tra tutti i film 
     if film_id is not None:
-        
         film = next((film for film in films if film['id'] == film_id), None)
         if film is not None:
             film["locandina"] = url_for('static', filename=f'images/films/{film["id"]}.jpg', _external=True)
             return jsonify(film)
         else:
             return {"error": "Film not found"}, 404
-    #Se non è presente un id nell'url ritorno tutti i film
-    else:    
+    else:
         for film in films:
             film["locandina"] = url_for('static', filename=f'images/films/{film["id"]}.jpg', _external=True)
-                    
         return jsonify(films) or []
 
 @app.route('/add_film', methods=['POST'])
 def write_film():
-    #code
-    #obbiettivo: creare un film con dei dati passati da una form html. l'id va generato con la funzione 'uuid.uuid4().hex'
-    #queesta istruzinoe è eseguibile solo se in modalità admin.
-    
-    
+    # code
+    # obbiettivo: creare un film con dei dati passati da una form html. l'id va generato con la funzione 'uuid.uuid4().hex'
+    # queesta istruzinoe è eseguibile solo se in modalità admin.
     return ""
 
 @app.route('/update_film', methods=['POST'])
 def update_film():
-    #code
-    #obbiettivo: come il create MA HA GIA' BISOGNO DI UN ID PER CERCARE IL FILM CORRETTO
-    #queesta istruzinoe è eseguibile solo se in modalità admin.
+    # code
+    # obbiettivo: come il create MA HA GIA' BISOGNO DI UN ID PER CERCARE IL FILM CORRETTO
+    # queesta istruzinoe è eseguibile solo se in modalità admin.
     return ""
 
 # @app.errorhandler(404)
 # def not_found():
-#     #gestire reindirizzamento alla pagine "404.html"
+#     # gestire reindirizzamento alla pagine "404.html"
 #     return ""
-
 
 @app.route("/film", methods=['GET'])
 def render_film():
-    return render_template("public/film.html")
-
+    if session["admin_logged_in"] == False:
+        return render_template("public/film.html")
+    else:
+        return render_template("admin/film.html")
 
 # Main entry point
 if __name__ == '__main__':

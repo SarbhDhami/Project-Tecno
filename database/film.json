@@ -5,14 +5,13 @@
         "genere": "sci-fi",
         "anno": 2010,
         "regista": "Christopher Nolan",
-        "attori": [
-            "Leonardo DiCaprio",
-            "Joseph Gordon-Levitt",
-            "Elliot Page"
-        ],
+        "attori": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
         "trama": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
         "prezzo": 12.0,
-        "locandina": "inception.jpg"
+        "trailer": "https://www.youtube.com/embed/YoHD9XEInc0",
+        "durata": 148,
+        "lingua": "English",
+        "paese": "USA"
     },
     {
         "id": "4",
@@ -20,14 +19,13 @@
         "genere": "azione",
         "anno": 2008,
         "regista": "Christopher Nolan",
-        "attori": [
-            "Christian Bale",
-            "Heath Ledger",
-            "Aaron Eckhart"
-        ],
+        "attori": "Christian Bale, Heath Ledger, Aaron Eckhart",
         "trama": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
         "prezzo": 15.0,
-        "locandina": "dark_knight.jpg"
+        "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
+        "durata": 152,
+        "lingua": "English",
+        "paese": "USA"
     },
     {
         "id": "5",
@@ -35,43 +33,82 @@
         "genere": "drammatico",
         "anno": 1994,
         "regista": "Robert Zemeckis",
-        "attori": [
-            "Tom Hanks",
-            "Robin Wright",
-            "Gary Sinise"
-        ],
+        "attori": "Tom Hanks, Robin Wright, Gary Sinise",
         "trama": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
         "prezzo": 10.0,
-        "locandina": "forrest_gump.jpg"
+        "trailer": "https://www.youtube.com/embed/uPIEn0M8su0",
+        "durata": 142,
+        "lingua": "English",
+        "paese": "USA"
     },
     {
         "id": "6",
+        "titolo": "Interstellar",
+        "genere": "sci-fi",
+        "anno": 2014,
+        "regista": "Christopher Nolan",
+        "attori": "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
+        "trama": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+        "prezzo": 14.0,
+        "trailer": "https://www.youtube.com/embed/zSWdZVtXT7E",
+        "durata": 169,
+        "lingua": "English",
+        "paese": "USA"
+    },
+    {
+        "id": "7",
         "titolo": "The Matrix",
         "genere": "sci-fi",
         "anno": 1999,
         "regista": "Lana Wachowski, Lilly Wachowski",
-        "attori": [
-            "Keanu Reeves",
-            "Laurence Fishburne",
-            "Carrie-Anne Moss"
-        ],
+        "attori": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
         "trama": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
         "prezzo": 13.0,
-        "locandina": "matrix.jpg"
+        "trailer": "https://www.youtube.com/embed/vKQi3bBA1y8",
+        "durata": 136,
+        "lingua": "English",
+        "paese": "USA"
     },
     {
-        "id": "test",
-        "titolo": "Film di test",
-        "genere": "test",
-        "anno": 2021,
-        "regista": "Test Test",
-        "attori": [
-            "Test Test1",
-            "Test Test2",
-            "Test Test3"
-        ],
-        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
-        "prezzo": 0.0,
-        "locandina": "titanic.jpg"
+        "id": "8",
+        "titolo": "Gladiator",
+        "genere": "azione",
+        "anno": 2000,
+        "regista": "Ridley Scott",
+        "attori": "Russell Crowe, Joaquin Phoenix, Connie Nielsen",
+        "trama": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+        "prezzo": 11.0,
+        "trailer": "https://www.youtube.com/embed/owK1qxDselE",
+        "durata": 155,
+        "lingua": "English",
+        "paese": "USA"
+    },
+    {
+        "id": "9",
+        "titolo": "The Shawshank Redemption",
+        "genere": "drammatico",
+        "anno": 1994,
+        "regista": "Frank Darabont",
+        "attori": "Tim Robbins, Morgan Freeman, Bob Gunton",
+        "trama": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "prezzo": 10.0,
+        "trailer": "https://www.youtube.com/embed/6hB3S9bIaco",
+        "durata": 142,
+        "lingua": "English",
+        "paese": "USA"
+    },
+    {
+        "id": "10",
+        "titolo": "Pulp Fiction",
+        "genere": "crime",
+        "anno": 1994,
+        "regista": "Quentin Tarantino",
+        "attori": "John Travolta, Uma Thurman, Samuel L. Jackson",
+        "trama": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+        "prezzo": 12.0,
+        "trailer": "https://www.youtube.com/embed/s7EdQ4FqbhY",
+        "durata": 154,
+        "lingua": "English",
+        "paese": "USA"
     }
 ]

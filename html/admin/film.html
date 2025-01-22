@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/film.css') }}" />
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}" defer></script>
+
+
+    <link rel="favicon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+    <title> Admin movie </title>
+</head>
+
+<body>
+    <nav class="navbara l-center" toggle="large">
+        <div class="navbar-component navbar-left">
+            <div class="navbar-logo">
+                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="navbar-logo" />
+            </div>
+            <a href="/" class="navbar-title title">Cinema Romani</a>
+        </div>
+
+        <div class="navbar-component navbar-middle"></div>
+
+        <div class="navbar-component navbar-right">
+            <div class="navbar-links">
+                <a class="navbar-link underline-on-hover" href="/">Home</a>
+                <a class="navbar-link underline-on-hover" href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <form action="create_film">
+            
+            <div>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" value="" disabled>
+            </div>
+            <div>
+                <label for="titolo">Title:</label>
+                <input type="text" id="titolo" name="titolo" value="Interstellar" required>
+            </div>
+            <div>
+                <label for="genere">Genre:</label>
+                <input type="text" id="genere" name="genere" value="sci-fi" required>
+            </div>
+            <div>
+                <label for="anno">Year:</label>
+                <input type="number" id="anno" name="anno" value="2014" required>
+            </div>
+            <div>
+                <label for="regista">Director:</label>
+                <input type="text" id="regista" name="regista" value="Christopher Nolan" required>
+            </div>
+            <div>
+                <label for="attori">Actors:</label>
+                <input type="text" id="attori" name="attori" value="Matthew McConaughey, Anne Hathaway, Jessica Chastain" required>
+            </div>
+            <div>
+                <label for="trama">Plot:</label>
+                <textarea id="trama" name="trama" required>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</textarea>
+            </div>
+            <div>
+                <label for="prezzo">Price:</label>
+                <input type="number" id="prezzo" name="prezzo" value="14.0" required>
+            </div>
+            <div>
+                <label for="trailer">Trailer:</label>
+                <input type="url" id="trailer" name="trailer" value="https://www.youtube.com/embed/zSWdZVtXT7E" required>
+            </div>
+            <div>
+                <label for="durata">Duration (min):</label>
+                <input type="number" id="durata" name="durata" value="169" required>
+            </div>
+            <div>
+                <label for="lingua">Language:</label>
+                <input type="text" id="lingua" name="lingua" value="English" required>
+            </div>
+            <div>
+                <label for="paese">Country:</label>
+                <input type="text" id="paese" name="paese" value="USA" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
