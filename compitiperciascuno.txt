@@ -1,6 +1,6 @@
 Questo file è per i compiti che ha ciascuno.
 
-Christian
+Kristian
 provi a modificare il file python seguendo le istruzioni presenti
 Cominci a creare dei dati VERI da utilizzare nei file del dabase. pensa bene agli attributi, così aggiungine se servono...
 (per esempio se in sale non c'è numero posti aggiungilo).
@@ -18,3 +18,7 @@ devi finire la navbar e cominciare a fare la pagine per la visualizzazione di un
 e di conseguenza la visualizzazione di una singola proiezione:
     esempio: https://cineplex.md/hall/1/9677#/
 
+prova a fare qualcosa di carino per la pagina 404. altrimenti ci penso io 
+
+
+(per le prossime giornate facciamo girare i compiti, quindi Kristian html e Sarb py e così via)
