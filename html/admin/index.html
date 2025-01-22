@@ -9,20 +9,65 @@
 </head>
 
 <body>
+<style>
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+    }
 
-    <nav class="navbar">
-        <ul>
-            <li>
-                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Icona Sito">
-            </li>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/login">Login</a>
-            </li>
-        </ul>
-    </nav>
+    .navbar ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .navbar li img {
+        height: 40px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .navbar li a:hover {
+        background-color: #575757;
+    }
+
+    .navbar li:first-child {
+        text-align: left;
+    }
+
+    .navbar li:last-child {
+        text-align: right;
+    }
+</style>
+
+<nav class="navbar">
+    <ul>
+        <li>
+            <a href="/"><img src="{{ url_for('static', filename='images/icon.png') }}" alt="Icona Sito"></a>
+        </li>
+        <li>
+            <a href="/">Cinema</a>
+        </li>
+        <li>
+            <a href="/login">Login</a>
+        </li>
+    </ul>
+</nav>
 
 
     <div class="container">
