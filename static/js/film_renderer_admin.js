@@ -2,6 +2,10 @@ ajax = new XMLHttpRequest();
 ajax.open("GET", "http://localhost:5000/read_film", true);
 ajax.send();
 
+class FilmCard {
+    
+}
+
 ajax.onreadystatechange = function() {
     if (ajax.readyState== 4 && ajax.status == 200) {
         var response = JSON.parse(ajax.responseText);

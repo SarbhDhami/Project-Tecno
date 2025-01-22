@@ -13,6 +13,11 @@ app.template_folder = "html"
 # Routes
 @app.route('/')
 def public_home():
+    if "admin_logged_in" not in session:
+        session["admin_logged_in"] = False
+        
+    if session["admin_logged_in"] == True:
+        return redirect(url_for("admin_home"))
     return render_template('public/index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -42,7 +47,7 @@ def admin_home():
 @app.route('/read_film', methods=['GET'])
 def read_film():
     #Prendo la variabile id dall'url
-    film_id = request.args.get('id', type=int)
+    film_id = request.args.get('id', None)
     
     #Converto il json in un dizionario python
     with open('database/film.json') as f:
@@ -69,6 +74,8 @@ def write_film():
     #code
     #obbiettivo: creare un film con dei dati passati da una form html. l'id va generato con la funzione 'uuid.uuid4().hex'
     #queesta istruzinoe è eseguibile solo se in modalità admin.
+    
+    
     return ""
 
 @app.route('/update_film', methods=['POST'])
@@ -83,6 +90,10 @@ def update_film():
 #     #gestire reindirizzamento alla pagine "404.html"
 #     return ""
 
+
+@app.route("/film", methods=['GET'])
+def render_film():
+    return render_template("public/film.html")
 
 
 # Main entry point
