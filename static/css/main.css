@@ -8,6 +8,7 @@ body{
     width: 100%; /* Imposta la larghezza per occupare tutta la pagina */
     height: 80px; /* Altezza rimane invariata */
     position: fixed; /* Fissa l'elemento in alto */
+    z-index: 10;
     top: 0; /* Posiziona l'elemento all'inizio della pagina */
     left: 0; /* Assicura che parta dal lato sinistro */
     /*
@@ -31,7 +32,7 @@ body{
     list-style-type: none;
     max-height: 50px;
 }
-    
+    /*
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +41,8 @@ body{
     margin: 50px auto;
     max-width: 1200px;
     margin-top: 100px;
-}
+
+}*/
 
 .film {
     flex: 0 1 18%;
@@ -66,14 +68,39 @@ body{
     background-color: yellow;
     aspect-ratio: 2/3
 }
-.logo {
-    position: fixed; /* Posiziona il logo rispetto alla finestra */
-    top: 5%; /* Posiziona il logo al 50% della finestra (verticalmente) */
-    left: 20px; /* Distanza da sinistra, come richiesto */
-    transform: translateY(-50%); /* Centra verticalmente il logo (spostato indietro della metà della sua altezza) */
-    
+
+
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: red;
+    margin: 50px auto;
+    max-width: 1200px;
+    margin-top: 100px;
+    position: relative; /* Necessario per calcolare le posizioni */
 }
 
+.logo {
+    position: fixed; /* Posizionato rispetto alla finestra */
+    top: 5%; /* Sempre in alto */
+    left: calc(21% - 160px); /* Aggiornato dinamicamente via JS */
+    transform: translateY(-50%);
+}
+
+.logo_cinema {
+    position: fixed; /* Posizionato rispetto alla finestra */
+    top: 3%; /* Sempre in alto */
+    left: calc(30% - 160px); /* Aggiornato dinamicamente via JS */
+    transform: translateY(-50%);
+}
+
+a {
+    color: white;
+}
 
 /* .film {
     background-color: blue;
@@ -83,3 +110,16 @@ body{
     margin: 20px auto 20px;
 } */
 
+.login_pagina{
+    position: fixed; /* Posizionato rispetto alla finestra */
+    top: 5%; /* Sempre in alto */
+    left: calc(100% - 160px); /* Aggiornato dinamicamente via JS */
+    transform: translateY(-50%);
+}
+.home_pagina
+{
+    position: fixed; /* Posizionato rispetto alla finestra */
+    top: 5%; /* Sempre in alto */
+    left: calc(40% - 160px); /* Aggiornato dinamicamente via JS */
+    transform: translateY(-50%);
+}

@@ -12,26 +12,36 @@
     <nav class="navbar">
         <ul>
             <li>
-                <img  class="logo" src="{{ url_for('static', filename='images/icon.png') }}" alt="Icona Sito">
+                <img class="logo" src="{{ url_for('static', filename='images/icon.png') }}" alt="Icona Sito">
             </li>
-        </ul>
-    </nav>
-   <!--  
-    
-    <nav class="navbar">
-        <ul>
-            
             <li>
-                <a href="/login">Login</a>
+                <h2 class="logo_cinema">Cinema</h2>
             </li>
+            <li>
+                <a class="login_pagina" href="/login">Login</a>
+            </li>
+            <li>
+                <a class="home_pagina" href="/home">home</a>
+            </li>
+
         </ul>
     </nav>
-    -->
-    
+    <!--  -->
+
 
 
     <div class="container">
 
+
+        <div class="film" bis_skin_checked="1">
+            <a href="/film?id=test">
+                <!-- localhost:5000/film?id=IDFILM -->
+
+                <div class="banner" bis_skin_checked="1"><img class="locandina"
+                        src="http://localhost:5000/static/images/films/titanic.jpg"></div><span>Film di prova</span>
+            </a>
+
+        </div>
 
     </div>
 
