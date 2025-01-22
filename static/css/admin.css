@@ -1,0 +1,13 @@
+.add-film, .add-film * {
+    background-color: gray !important;
+    position: relative;
+}
+
+.add-film-icon {
+    color: white !important;
+    max-width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
