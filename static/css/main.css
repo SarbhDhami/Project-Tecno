@@ -1,26 +1,24 @@
+
+
+:root {
+    --white: #FAF3E0;
+    --black: #1C1C1C;
+    --red: #B22222;
+    --gold: #FFD700;
+}
+
+
+::-webkit-scrollbar {
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+}
+
 body{
     background-color: gray;
     padding: 0 30px;
-}
-
-.navbar{
-    background-color: blueviolet;
-    width: 100%; /* Imposta la larghezza per occupare tutta la pagina */
-    height: 80px; /* Altezza rimane invariata */
-    position: fixed; /* Fissa l'elemento in alto */
-    z-index: 10;
-    top: 0; /* Posiziona l'elemento all'inizio della pagina */
-    left: 0; /* Assicura che parta dal lato sinistro */
-    /*
-    background-color: blueviolet;
-    width: auto;
-    height: 100px;
-    */
-}
-
-.navbar li {
-    display: inline-block;
-    max-height: 50px;
 }
 
 .locandina {
@@ -28,50 +26,17 @@ body{
     height: 100%;
 }
 
-.navbar ul {
-    list-style-type: none;
-    max-height: 50px;
-}
-    /*
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    background-color: red;
-    margin: 50px auto;
-    max-width: 1200px;
-    margin-top: 100px;
-
-}*/
-
 .film {
     flex: 0 1 18%;
     background-color: blue;
     aspect-ratio: 4/7;
     margin: 20px 1%; /* Adjusted margin to ensure max distance between cards is 20px */
 }
-.navbar img {
-    height: 50px;
-}
-
-/* .container {
-    background-color: red;
-    margin: 0 auto;
-    width: 90%;
-
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
-} */
 
 .banner {
     background-color: yellow;
     aspect-ratio: 2/3
 }
-
-
-
-
 
 .container {
     display: flex;
@@ -83,51 +48,4 @@ body{
     max-width: 1200px;
     margin-top: 100px;
     position: relative; /* Necessario per calcolare le posizioni */
-}
-
-
-
-
-
-.logo {
-    position: fixed; /* Posizionato rispetto alla finestra */
-    top: 5%; /* Sempre in alto */
-    left: calc(21% - 160px); /* Aggiornato dinamicamente via JS */
-    transform: translateY(-50%);
-}
-
-.logo_cinema {
-    position: fixed; /* Posizionato rispetto alla finestra */
-    top: 3%; /* Sempre in alto */
-    left: calc(30% - 160px); /* Aggiornato dinamicamente via JS */
-    transform: translateY(-50%);
-}
-
-a {
-    color: white;
-}
-
-/* .film {
-    background-color: blue;
-    aspect-ratio: 4/7;
-
-    width: 200px;
-    margin: 20px auto 20px;
-} */
-
-.login_pagina{
-    position: fixed; /* Posizionato rispetto alla finestra */
-    top: 5%; /* Sempre in alto */
-    left: calc(100% - 160px); /* Aggiornato dinamicamente via JS */
-    transform: translateY(-50%);
-}
-.home_pagina
-{
-    position: fixed; /* Posizionato rispetto alla finestra */
-    top: 5%; /* Sempre in alto */
-    left: calc(40% - 160px); /* Aggiornato dinamicamente via JS */
-    transform: translateY(-50%);
-}
-.titolo_film{
-    margin-left: 50px;
 }

@@ -60,198 +60,228 @@
         "locandina": "matrix.jpg"
     },
     {
-        "id": "7",
-        "titolo": "Pulp Fiction",
-        "genere": "crime",
-        "anno": 1994,
-        "regista": "Quentin Tarantino",
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
         "attori": [
-            "John Travolta",
-            "Uma Thurman",
-            "Samuel L. Jackson"
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
         ],
-        "trama": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-        "prezzo": 14.0,
-        "locandina": "pulp_fiction.jpg"
-    },
-    {
-        "id": "8",
-        "titolo": "The Shawshank Redemption",
-        "genere": "drammatico",
-        "anno": 1994,
-        "regista": "Frank Darabont",
-        "attori": [
-            "Tim Robbins",
-            "Morgan Freeman",
-            "Bob Gunton"
-        ],
-        "trama": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-        "prezzo": 11.0,
-        "locandina": "shawshank_redemption.jpg"
-    },
-    {
-        "id": "9",
-        "titolo": "Fight Club",
-        "genere": "drammatico",
-        "anno": 1999,
-        "regista": "David Fincher",
-        "attori": [
-            "Brad Pitt",
-            "Edward Norton",
-            "Meat Loaf"
-        ],
-        "trama": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into something much, much more.",
-        "prezzo": 12.5,
-        "locandina": "fight_club.jpg"
-    },
-    {
-        "id": "10",
-        "titolo": "The Godfather",
-        "genere": "crime",
-        "anno": 1972,
-        "regista": "Francis Ford Coppola",
-        "attori": [
-            "Marlon Brando",
-            "Al Pacino",
-            "James Caan"
-        ],
-        "trama": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-        "prezzo": 16.0,
-        "locandina": "godfather.jpg"
-    },
-    {
-        "id": "11",
-        "titolo": "The Lord of the Rings: The Fellowship of the Ring",
-        "genere": "fantasy",
-        "anno": 2001,
-        "regista": "Peter Jackson",
-        "attori": [
-            "Elijah Wood",
-            "Ian McKellen",
-            "Orlando Bloom"
-        ],
-        "trama": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-        "prezzo": 14.5,
-        "locandina": "lotr_fellowship.jpg"
-    },
-    {
-        "id": "12",
-        "titolo": "Star Wars: Episode IV - A New Hope",
-        "genere": "sci-fi",
-        "anno": 1977,
-        "regista": "George Lucas",
-        "attori": [
-            "Mark Hamill",
-            "Harrison Ford",
-            "Carrie Fisher"
-        ],
-        "trama": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station.",
-        "prezzo": 13.5,
-        "locandina": "star_wars_new_hope.jpg"
-    },
-    {
-        "id": "13",
-        "titolo": "The Lion King",
-        "genere": "animazione",
-        "anno": 1994,
-        "regista": "Roger Allers, Rob Minkoff",
-        "attori": [
-            "Matthew Broderick",
-            "Jeremy Irons",
-            "James Earl Jones"
-        ],
-        "trama": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
-        "prezzo": 10.0,
-        "locandina": "lion_king.jpg"
-    },
-    {
-        "id": "14",
-        "titolo": "Gladiator",
-        "genere": "azione",
-        "anno": 2000,
-        "regista": "Ridley Scott",
-        "attori": [
-            "Russell Crowe",
-            "Joaquin Phoenix",
-            "Connie Nielsen"
-        ],
-        "trama": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
-        "prezzo": 13.0,
-        "locandina": "gladiator.jpg"
-    },
-    {
-        "id": 15,
-        "titolo": "Titanic",
-        "genere": "drammatico",
-        "anno": 1997,
-        "regista": "James Cameron",
-        "attori": [
-            "Leonardo DiCaprio",
-            "Kate Winslet",
-            "Billy Zane"
-        ],
-        "trama": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
-        "prezzo": 14.0,
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
         "locandina": "titanic.jpg"
     },
     {
-        "id": 16,
-        "titolo": "Jurassic Park",
-        "genere": "avventura",
-        "anno": 1993,
-        "regista": "Steven Spielberg",
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
         "attori": [
-            "Sam Neill",
-            "Laura Dern",
-            "Jeff Goldblum"
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
         ],
-        "trama": "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
-        "prezzo": 12.0,
-        "locandina": "jurassic_park.jpg"
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
     },
     {
-        "id": 17,
-        "titolo": "The Avengers",
-        "genere": "azione",
-        "anno": 2012,
-        "regista": "Joss Whedon",
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
         "attori": [
-            "Robert Downey Jr.",
-            "Chris Evans",
-            "Scarlett Johansson"
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
         ],
-        "trama": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
-        "prezzo": 15.0,
-        "locandina": "avengers.jpg"
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
     },
     {
-        "id": 18,
-        "titolo": "Avatar",
-        "genere": "sci-fi",
-        "anno": 2009,
-        "regista": "James Cameron",
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
         "attori": [
-            "Sam Worthington",
-            "Zoe Saldana",
-            "Sigourney Weaver"
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
         ],
-        "trama": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-        "prezzo": 16.0,
-        "locandina": "avatar.jpg"
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
     },
     {
-        "id": 18,
-        "titolo": "Titanic",
-        "genere": "sci-fi",
-        "anno": 2009,
-        "regista": "James Cameron",
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
         "attori": [
-            "Sam Worthington",
-            "Zoe Saldana",
-            "Sigourney Weaver"
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
         ],
-        "trama": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-        "prezzo": 16.0,
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
+        "locandina": "titanic.jpg"
+    },
+    {
+        "id": "test",
+        "titolo": "Film di test",
+        "genere": "test",
+        "anno": 2021,
+        "regista": "Test Test",
+        "attori": [
+            "Test Test1",
+            "Test Test2",
+            "Test Test3"
+        ],
+        "trama": "TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST TEEEEEEEEEEST",
+        "prezzo": 0.0,
         "locandina": "titanic.jpg"
     },
     {

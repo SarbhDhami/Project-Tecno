@@ -1,4 +1,24 @@
-.add-film, .add-film * {
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-inline: 0;
+}
+
+
+.l-center {
+    left: 50%;
+    translate: -50%;
+}
+
+.add-film,
+.add-film * {
     background-color: gray !important;
     position: relative;
 }
