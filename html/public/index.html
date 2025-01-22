@@ -2,47 +2,43 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}" />
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}" defer></script>
+
     <link rel="favicon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+    <title> Admin Home </title>
 </head>
 
 <body>
+    <nav class="navbara l-center" toggle="large">
+        <div class="navbar-component navbar-left">
+            <div class="navbar-logo">
+                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="navbar-logo" />
+            </div>
+            <a href="/" class="navbar-title title">Cinema Romani</a>
+        </div>
 
+        <div class="navbar-component navbar-middle"></div>
 
-    <nav class="navbar">
-        <ul>
-            <li>
-                <img class="logo" src="{{ url_for('static', filename='images/icon.png') }}" alt="Icona Sito">
-            </li>
-            <li>
-                <h2 class="logo_cinema">Cinema</h2>
-            </li>
-            <li>
-                <a class="login_pagina" href="/login">Login</a>
-            </li>
-            <li>
-                <a class="home_pagina" href="/home">home</a>
-            </li>
-
-        </ul>
+        <div class="navbar-component navbar-right">
+            <div class="navbar-links">
+                <a class="navbar-link underline-on-hover" href="/">Home</a>
+                <a class="navbar-link underline-on-hover" href="/login">Login</a>
+            </div>
+        </div>
     </nav>
-    <!--  -->
 
 
 
     <div class="container">
-            <div class="film" bis_skin_checked="1">
-                <a href="/film?id=test">
-                    <!-- localhost:5000/film?id=IDFILM -->
 
-                    <div class="banner" bis_skin_checked="1"><img class="locandina"src="http://localhost:5000/static/images/films/test.jpg"></div>
-                    <h3 class="titolo_film">Jumanji</h3>
-                </a>
-                    <h3>Genere</h3>
-            </div>
+
     </div>
 
-    <script src="{{ url_for('static', filename='js/film_renderer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/film_renderer_admin.js') }}"></script>
 
 
 </body>
