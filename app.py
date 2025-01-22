@@ -78,10 +78,10 @@ def update_film():
     #queesta istruzinoe è eseguibile solo se in modalità admin.
     return ""
 
-@app.errorhandler(404)
-def not_found():
-    #gestire reindirizzamento alla pagine "404.html"
-    return ""
+# @app.errorhandler(404)
+# def not_found():
+#     #gestire reindirizzamento alla pagine "404.html"
+#     return ""
 
 
 
