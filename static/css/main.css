@@ -75,6 +75,7 @@ body{
 
 .container {
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
     justify-content: flex-start;
     background-color: red;
@@ -83,6 +84,10 @@ body{
     margin-top: 100px;
     position: relative; /* Necessario per calcolare le posizioni */
 }
+
+
+
+
 
 .logo {
     position: fixed; /* Posizionato rispetto alla finestra */
@@ -123,6 +128,6 @@ a {
     left: calc(40% - 160px); /* Aggiornato dinamicamente via JS */
     transform: translateY(-50%);
 }
-.descrizione_film_1{
-    top: 5%; /* Sempre in alto */
+.titolo_film{
+    margin-left: 50px;
 }
