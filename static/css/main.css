@@ -123,3 +123,6 @@ a {
     left: calc(40% - 160px); /* Aggiornato dinamicamente via JS */
     transform: translateY(-50%);
 }
+.descrizione_film_1{
+    top: 5%; /* Sempre in alto */
+}
