@@ -3,13 +3,12 @@ import os
 import json
 from flask_cors import CORS
 
-
-# Configuration
 app = Flask(__name__)
 
-CORS(app)  # This will allow all domains to access your backend
-app.secret_key = os.urandom(24)  # Secret key for session management
-ADMIN_PASSWORD = 'admin'  # Replace with your desired admin password
+CORS(app)  # La parte JS riesce a comunicare con PY
+app.secret_key = os.urandom(24)  # Chiave segreta della sessione
+ADMIN_PASSWORD = 'admin'  # Password admin. 
+app.template_folder = "html"
 
 # Routes
 @app.route('/')
@@ -27,6 +26,8 @@ def login():
             return "Invalid password", 403
     return render_template('admin/login.html')
 
+
+
 @app.route('/logout')
 def logout():
     session['admin_logged_in'] = False
@@ -38,31 +39,51 @@ def admin_home():
         return redirect(url_for('login'))
     return render_template('admin/index.html')
 
-@app.route('/film')
-def get_film():
-    film_id = request.args.get('id', type=int)
-    if film_id is None:
-        return {"error": "Film ID is required"}, 400
-    
-    with open('database/film.json') as f:
-        films = json.load(f)
-    
-    film = next((film for film in films if film['id'] == film_id), None)
-    if film is not None:
-        return film
-    else:
-        return {"error": "Film not found"}, 404
-
-@app.route('/read_film')
+@app.route('/read_film', methods=['GET'])
 def read_film():
+    #Prendo la variabile id dall'url
+    film_id = request.args.get('id', type=int)
+    
+    #Converto il json in un dizionario python
     with open('database/film.json') as f:
         films = json.load(f)
         
-    for film in films:
-        film["locandina"] = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
+    #Se è presente un id nell'url provo a cercarlo tra tutti i film 
+    if film_id is not None:
         
-                
-    return jsonify(films)
+        film = next((film for film in films if film['id'] == film_id), None)
+        if film is not None:
+            film["locandina"] = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
+            return jsonify(film)
+        else:
+            return {"error": "Film not found"}, 404
+    #Se non è presente un id nell'url ritorno tutti i film
+    else:    
+        for film in films:
+            film["locandina"] = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
+                    
+        return jsonify(films)
+
+@app.route('/add_film', methods=['POST'])
+def write_film():
+    #code
+    #obbiettivo: creare un film con dei dati passati da una form html. l'id va generato con la funzione 'uuid.uuid4().hex'
+    #queesta istruzinoe è eseguibile solo se in modalità admin.
+    return ""
+
+@app.route('/update_film', methods=['POST'])
+def update_film():
+    #code
+    #obbiettivo: come il create MA HA GIA' BISOGNO DI UN ID PER CERCARE IL FILM CORRETTO
+    #queesta istruzinoe è eseguibile solo se in modalità admin.
+    return ""
+
+@app.errorhandler(404)
+def not_found():
+    #gestire reindirizzamento alla pagine "404.html"
+    return ""
+
+
 
 # Main entry point
 if __name__ == '__main__':
