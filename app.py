@@ -29,7 +29,7 @@ def login():
             return redirect(url_for('admin_home'))
         else:
             return "Invalid password", 403
-    return render_template('admin/login.html')
+    return render_template('login.html')
 
 
 
@@ -58,16 +58,16 @@ def read_film():
         
         film = next((film for film in films if film['id'] == film_id), None)
         if film is not None:
-            film["locandina"] = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
+            film["locandina"] = url_for('static', filename=f'images/films/{film["id"]}.jpg', _external=True)
             return jsonify(film)
         else:
             return {"error": "Film not found"}, 404
     #Se non è presente un id nell'url ritorno tutti i film
     else:    
         for film in films:
-            film["locandina"] = url_for('static', filename=f'images/films/{film["locandina"]}', _external=True)
+            film["locandina"] = url_for('static', filename=f'images/films/{film["id"]}.jpg', _external=True)
                     
-        return jsonify(films)
+        return jsonify(films) or []
 
 @app.route('/add_film', methods=['POST'])
 def write_film():
