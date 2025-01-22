@@ -1,0 +1,6 @@
+iframe {
+    border: none;
+    margin: 0 auto;
+    width: 60%;
+    aspect-ratio: 16 / 9;
+}

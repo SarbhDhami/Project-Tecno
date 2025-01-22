@@ -12,16 +12,13 @@
 }
 
 
-.l-center {
-    left: 50%;
-    translate: -50%;
-}
 
 .add-film,
 .add-film * {
     background-color: gray !important;
     position: relative;
 }
+
 
 .add-film-icon {
     color: white !important;

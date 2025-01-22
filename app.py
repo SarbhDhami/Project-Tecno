@@ -28,7 +28,7 @@ def login():
             session['admin_logged_in'] = True
             return redirect(url_for('admin_home'))
         else:
-            return "Invalid password", 403
+            return "Invalid password ", 403
     return render_template('login.html')
 
 

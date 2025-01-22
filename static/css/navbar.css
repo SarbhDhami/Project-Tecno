@@ -2,15 +2,10 @@
 
 
 :root {
-
-  --body-bg-color: rgb(240, 240, 240);
-  --body-font-color: var();
-
   --inclinazione-navbar: 30deg;
   --navbar-bg-color-1: #1C1C1C;
   --navbar-bg-color-2: #FFD700;
   --navbar-font-color: white;
-
 }
 
 .navbara {
@@ -19,6 +14,9 @@
   position: fixed;
   top: 0;
   color: white;
+  
+  left: 50%;
+  translate: -50%;
 }
 
 .navbara a {

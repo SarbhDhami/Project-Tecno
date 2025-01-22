@@ -2,42 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/film.css') }}" />
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}" defer></script>
+
+
+    <link rel="favicon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+    <title> Home </title>
 </head>
 
 <body>
+    <nav class="navbara l-center" toggle="large">
+        <div class="navbar-component navbar-left">
+            <div class="navbar-logo">
+                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="navbar-logo" />
+            </div>
+            <a href="/" class="navbar-title title">Cinema Romani</a>
+        </div>
 
-    <pre id="pre">
+        <div class="navbar-component navbar-middle"></div>
+
+        <div class="navbar-component navbar-right">
+            <div class="navbar-links">
+                <a class="navbar-link underline-on-hover" href="/">Home</a>
+                <a class="navbar-link underline-on-hover" href="/login">Login</a>
+            </div>
+        </div>
+    </nav>
 
 
-    </pre>
-
-
-    <script>
-
-        function getIdFromUrl() {
-            var urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('id');
-        }
-
-        var filmId = getIdFromUrl();
+    <div class="container">
         
-        ajax = new XMLHttpRequest();
-        ajax.open("GET", "http://localhost:5000/read_film?id="+filmId, true);
-        ajax.send();
+        <iframe src="https://www.youtube.com/embed/K6W4HHUxoEw"  title="Companion | Trailer Ufficiale" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        ajax.onreadystatechange = function() {
-            if (ajax.readyState== 4 && ajax.status == 200) {
-                var response = JSON.parse(ajax.responseText);
-                console.log(response);
-                document.querySelector("#pre").innerHTML = JSON.stringify(response, null, 2);
+        <pre id="pre"></pre>
+        <script>
+
+            function getIdFromUrl() {
+                var urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('id');
             }
-        }
+    
+            var filmId = getIdFromUrl();
+            
+            ajax = new XMLHttpRequest();
+            ajax.open("GET", "http://localhost:5000/read_film?id="+filmId, true);
+            ajax.send();
+    
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState== 4 && ajax.status == 200) {
+                    var response = JSON.parse(ajax.responseText);
+                    console.log(response);
+                    document.querySelector("#pre").innerHTML = JSON.stringify(response, null, 2);
+                }
+            }
+    
+                    
+        </script>
+    </div>
 
-                
-    </script>
 
 
 </body>

@@ -5,6 +5,8 @@
     --black: #1C1C1C;
     --red: #B22222;
     --gold: #FFD700;
+
+
 }
 
 
@@ -17,8 +19,19 @@
 }
 
 body{
-    background-color: gray;
+    background-color: black;
     padding: 0 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: var(--red);
+    margin: 175px auto;
+    max-width: 1200px;
+    border-radius: 15px;
 }
 
 .locandina {
@@ -28,24 +41,27 @@ body{
 
 .film {
     flex: 0 1 18%;
-    background-color: blue;
+    background-color: var(--gold);
     aspect-ratio: 4/7;
     margin: 20px 1%; /* Adjusted margin to ensure max distance between cards is 20px */
 }
 
-.banner {
-    background-color: yellow;
-    aspect-ratio: 2/3
+
+.film a{
+    color: var(--black);
+    font-size: 1.6em;
+    font-family: "Bebas Neue";
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
 }
 
-.container {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    background-color: red;
-    margin: 50px auto;
-    max-width: 1200px;
-    margin-top: 100px;
-    position: relative; /* Necessario per calcolare le posizioni */
+.film .genre {
+    font-size: 0.7em !important;
+    color: red !important;
+}
+
+.banner {
+    aspect-ratio: 2/3
 }

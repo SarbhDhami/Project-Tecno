@@ -26,9 +26,14 @@ class FilmCard {
 
         link.appendChild(banner);
 
-        var span = document.createElement("span");
+        var span = document.createElement("div");
         span.innerHTML = this.film_obj.titolo;
         link.appendChild(span);
+
+        var genre = document.createElement("div");
+        genre.className = "genre";
+        genre.innerHTML = this.film_obj.genere;
+        link.appendChild(genre);
 
         film.appendChild(link);
 
