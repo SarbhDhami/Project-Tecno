@@ -1,22 +1,8 @@
 [
     {
-        "id": "3",
-        "titolo": "Inception",
-        "genere": "sci-fi",
-        "anno": "2010",
-        "regista": "Christopher Nolan",
-        "attori": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
-        "trama": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
-        "prezzo": "12.0",
-        "trailer": "https://www.youtube.com/embed/YoHD9XEInc0",
-        "durata": "148",
-        "lingua": "English",
-        "paese": "USA"
-    },
-    {
         "id": "4",
         "titolo": "The Dark Knight",
-        "genere": "azione",
+        "genere": "azionee",
         "anno": "2008",
         "regista": "Christopher Nolan",
         "attori": "Christian Bale, Heath Ledger, Aaron Eckhart",
@@ -25,7 +11,8 @@
         "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
         "durata": "152",
         "lingua": "English",
-        "paese": "USA"
+        "paese": "USA",
+        "image": ""
     },
     {
         "id": "5",
@@ -42,20 +29,6 @@
         "paese": "USA"
     },
     {
-        "id": "6",
-        "titolo": "Interstellar",
-        "genere": "sci-fi",
-        "anno": "2014",
-        "regista": "Christopher Nolan",
-        "attori": "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
-        "trama": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-        "prezzo": "14.0",
-        "trailer": "https://www.youtube.com/embed/zSWdZVtXT7E",
-        "durata": "169",
-        "lingua": "English",
-        "paese": "USA"
-    },
-    {
         "id": "7",
         "titolo": "The Matrix",
         "genere": "sci-fi",
@@ -68,65 +41,5 @@
         "durata": "136",
         "lingua": "English",
         "paese": "USA"
-    },
-    {
-        "titolo": "ciccio",
-        "genere": "ciccio",
-        "anno": "123012",
-        "regista": "ciccio",
-        "attori": "ciccio",
-        "trama": "ciccio picchia tutti",
-        "prezzo": "123123",
-        "trailer": "https://www.youtube.com/embed/ZeGcfI4NMcg",
-        "durata": "132425",
-        "lingua": "ITA",
-        "paese": "ITALIA",
-        "image": "ciccio.jpg",
-        "id": "cbfa9209f3b4449b831551a71b5336b0"
-    },
-    {
-        "titolo": "The Dark Knights",
-        "genere": "azione",
-        "anno": "2008",
-        "regista": "Christopher Nolan",
-        "attori": "Christian Bale, Heath Ledger, Aaron Eckhart",
-        "trama": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
-        "prezzo": "15.0",
-        "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
-        "durata": "152",
-        "lingua": "English",
-        "paese": "USA",
-        "image": "",
-        "id": "442f82473ead4d8ab3251fed67ff7412"
-    },
-    {
-        "titolo": "Inceptions",
-        "genere": "sci-fi",
-        "anno": "2010",
-        "regista": "Christopher Nolan",
-        "attori": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
-        "trama": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
-        "prezzo": "12.0",
-        "trailer": "https://www.youtube.com/embed/YoHD9XEInc0",
-        "durata": "148",
-        "lingua": "English",
-        "paese": "USA",
-        "image": "",
-        "id": "7803402ae93a4ef787b9e2cfa0f0febe"
-    },
-    {
-        "titolo": "ciccios",
-        "genere": "ciccio",
-        "anno": "123012",
-        "regista": "ciccio",
-        "attori": "ciccio",
-        "trama": "ciccio picchia tutti",
-        "prezzo": "123123",
-        "trailer": "https://www.youtube.com/embed/ZeGcfI4NMcg",
-        "durata": "132425",
-        "lingua": "ITA",
-        "paese": "ITALIA",
-        "image": "ciccio.jpg",
-        "id": "ab2d30f5439145cc991ceab10e1fe3fb"
     }
 ]

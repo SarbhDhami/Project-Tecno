@@ -25,9 +25,11 @@ function renderForm(response = {}) {
     var form = document.createElement('form');
     form.setAttribute('action', 'create_film');
     form.setAttribute('method', 'POST');
+    form.setAttribute('enctype', 'multipart/form-data');
+    
 
     var fields = [
-        { label: 'ID', id: 'id', type: 'text', value: response.id || '', disabled: true },
+        { label: 'ID', id: 'id', type: 'text', value: response.id || 'will be generated', readonly: true },
         { label: 'Title', id: 'titolo', type: 'text', value: response.titolo || '', required: true },
         { label: 'Genre', id: 'genere', type: 'text', value: response.genere || '', required: true },
         { label: 'Year', id: 'anno', type: 'number', value: response.anno || '', required: true },
@@ -59,6 +61,7 @@ function renderForm(response = {}) {
         }
         input.setAttribute('id', field.id);
         input.setAttribute('name', field.id);
+        if (field.readonly) input.readOnly = true;
         if (field.disabled) input.disabled = true;
         if (field.required) input.required = true;
         div.appendChild(input);
