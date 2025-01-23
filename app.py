@@ -82,7 +82,7 @@ def read_film():
 
 @app.route('/create_film', methods=['POST', 'GET'])
 def write_film():
-    if not session.get('admin_logged_in'):
+    if session["admin_logged_in"] == False:
         return redirect(url_for('login'))
 
     film_data = request.form.to_dict()
@@ -121,31 +121,9 @@ def write_film():
     return redirect(url_for('admin_home'))
 
 
-# @app.route('/delete_film', methods=['POST'])
-# def delete_film():
-#     if not session.get('admin_logged_in'):
-#         return redirect(url_for('login'))
-
-#     film_id = request.form.get('id', None)
-
-#     if film_id is None:
-#         return redirect(url_for('admin_home'))
-
-#     with open('database/film.json', 'r+') as f:
-#         films = json.load(f)
-#         films = [film for film in films if film['id'] != film_id]
-#         f.seek(0)
-#         json.dump(films, f, indent=4)
-#         f.truncate()
-
-#     image_path = os.path.join(app.config['UPLOAD_FOLDER'], f'{film_id}.jpg')
-#     if os.path.exists(image_path):
-#         os.remove(image_path)
-
-#     return redirect(url_for('admin_home'))
 @app.route('/delete_film', methods=['GET'])
 def delete_film():
-    if not session.get('admin_logged_in'):
+    if session["admin_logged_in"] == False:
         return redirect(url_for('login'))
 
     film_id = request.args.get('id')
@@ -179,6 +157,11 @@ def render_film():
             return redirect(url_for("public_home"))
     else:
         return render_template("admin/film.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 
 # Main entry point
 if __name__ == '__main__':

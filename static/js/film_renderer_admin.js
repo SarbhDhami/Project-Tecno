@@ -54,12 +54,15 @@ ajax.onreadystatechange = function () {
         }
 
 
-        Array.from(document.getElementsByClassName("film")).forEach(element => {
+        Array.from(document.getElementsByClassName("film")).forEach((element, index) => {
+            if (index === 0) return; // Skip the first element
             var deleteLink = document.createElement("a");
             deleteLink.className = "delete-button";
-            deleteLink.innerHTML = "X";
+            var deleteImg = document.createElement("img");
+            deleteImg.src = "http://localhost:5000/static/images/utils/x.svg";
+            deleteImg.className = "delete-icon";
+            deleteLink.appendChild(deleteImg);
             var filmId = element.id;
-            // 
             deleteLink.href = "http://localhost:5000/delete_film?id=" + filmId;
 
             element.appendChild(deleteLink);
@@ -73,7 +76,7 @@ var addFilmCard = document.createElement("div");
 addFilmCard.className = "film add-film";
 
 var addimg = document.createElement("img");
-addimg.src = "http://localhost:5000//static/images/utils/plus.png";
+addimg.src = "http://localhost:5000/static/images/utils/plus.png";
 addimg.className = "add-film-icon";
 addFilmCard.appendChild(addimg);
 

@@ -47,13 +47,13 @@ ajax.onreadystatechange = function() {
             { label: "Trama", value: response.trama},
             { label: "Regista", value: response.regista },
             { label: "Attori", value: response.attori },
-            { label: "Genere", value: response.genere },
-            { label: "Prezzo", value: response.prezzo }
+            { label: "Genere", value: response.genere }
         ];
 
         details.forEach(function(detail) {
             var p = document.createElement('p');
-            p.innerHTML = "<strong>" + detail.label + ":</strong> " + detail.value;
+            p.className = detail.label;
+            p.innerHTML = detail.label + " " + detail.value;
             col.appendChild(p);
         });
         row.appendChild(col);

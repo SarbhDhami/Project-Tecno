@@ -36,7 +36,6 @@ function renderForm(response = {}) {
         { label: 'Director', id: 'regista', type: 'text', value: response.regista || '', required: true },
         { label: 'Actors', id: 'attori', type: 'text', value: response.attori || '', required: true },
         { label: 'Plot', id: 'trama', type: 'textarea', value: response.trama || '', required: true },
-        { label: 'Price', id: 'prezzo', type: 'number', value: response.prezzo || '', required: true },
         { label: 'Trailer', id: 'trailer', type: 'url', value: response.trailer || '', required: true },
         { label: 'Duration (min)', id: 'durata', type: 'number', value: response.durata || '', required: true },
         { label: 'Language', id: 'lingua', type: 'text', value: response.lingua || '', required: true },

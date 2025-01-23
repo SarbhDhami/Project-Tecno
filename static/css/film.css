@@ -36,3 +36,8 @@ input {
     padding: 10px;
     margin: 10px 0;
 }
+
+.Titolo {
+    font-size: 2em;
+    margin: 20px 0;
+}
