@@ -8,7 +8,7 @@ addimg.className = "add-film-icon";
 addFilmCard.appendChild(addimg);
 
 addFilmCard.onclick = function() {
-    window.location.href = "/crea_film";
+    window.location.href = "/film";
 };
 
 document.querySelector(".container").appendChild(addFilmCard);

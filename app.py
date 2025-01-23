@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, j
 import os
 import json
 from flask_cors import CORS
+import uuid
 
 app = Flask(__name__)
 
@@ -61,29 +62,52 @@ def read_film():
             film["locandina"] = url_for('static', filename=f'images/films/{film["id"]}.jpg', _external=True)
         return jsonify(films) or []
 
-@app.route('/add_film', methods=['POST'])
+@app.route('/create_film', methods=['POST'])
 def write_film():
-    # code
-    # obbiettivo: creare un film con dei dati passati da una form html. l'id va generato con la funzione 'uuid.uuid4().hex'
-    # queesta istruzinoe è eseguibile solo se in modalità admin.
-    return ""
+    
+    if not session.get('admin_logged_in'):
+        return redirect(url_for('login'))
 
-@app.route('/update_film', methods=['POST'])
-def update_film():
-    # code
-    # obbiettivo: come il create MA HA GIA' BISOGNO DI UN ID PER CERCARE IL FILM CORRETTO
-    # queesta istruzinoe è eseguibile solo se in modalità admin.
-    return ""
+    film_data = request.form.to_dict()
+    film_id = film_data.get('id', None)
 
-# @app.errorhandler(404)
-# def not_found():
-#     # gestire reindirizzamento alla pagine "404.html"
-#     return ""
+    if 'image' in request.form:
+        image = request.files.get('image', "")
+        if film_id is None or not film_id_exists(film_id):
+            film_id = uuid.uuid4().hex
+        image.save(os.path.join('static/images/films', f'{film_id}.jpg'))
+        film_data['id'] = film_id
+
+    with open('database/film.json', 'r+') as f:
+        films = json.load(f)
+        if film_id is None or not film_id_exists(film_id, films):
+            film_id = uuid.uuid4().hex
+            film_data['id'] = film_id
+            films.append(film_data)
+        else:
+            for i, film in enumerate(films):
+                if film['id'] == film_id:
+                    films[i] = film_data
+                    break
+        f.seek(0)
+        json.dump(films, f, indent=4)
+        f.truncate()
+
+    return redirect(url_for('admin_home'))
+
+def film_id_exists(film_id, films=None):
+    if films is None:
+        with open('database/film.json') as f:
+            films = json.load(f)
+    return any(film['id'] == film_id for film in films)
 
 @app.route("/film", methods=['GET'])
 def render_film():
     if session["admin_logged_in"] == False:
-        return render_template("public/film.html")
+        if request.args.get('id') is not None and request.args.get('id') != "":
+            return render_template("public/film.html")
+        else:
+            return redirect(url_for("public_home"))
     else:
         return render_template("admin/film.html")
 
