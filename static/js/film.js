@@ -52,9 +52,25 @@ ajax.onreadystatechange = function() {
 
         details.forEach(function(detail) {
             var p = document.createElement('p');
-            p.className = detail.label;
-            p.innerHTML = detail.label + " " + detail.value;
+            p.className = "p";
+            p.innerHTML = detail.label == "Titolo" ? "<h1><a href='"+"https://www.google.com/search?q="+detail.value.replace(/ /g, "+")+"'>" + detail.value + "</a></h1>" : detail.label;
+            var subp = document.createElement('p');
+            subp.className = "subp";
+            subp.innerHTML = detail.label == "Titolo" || detail.label == "Attori" || detail.label == "Regista" ? "" : detail.value;
             col.appendChild(p);
+            if (detail.label == "Attori" || detail.label == "Regista") {
+                var actors = detail.value.split(", ");
+                actors.forEach(function(actor) {
+                    var actorLink = document.createElement('a');
+                    actorLink.href = "https://www.google.com/search?q=" + actor.replace(/ /g, "+");
+                    actorLink.target = "_blank";
+                    actorLink.innerHTML = actor;
+                    subp.appendChild(actorLink);
+                    subp.appendChild(document.createTextNode(", "));
+                });
+                subp.removeChild(subp.lastChild); // Remove the last comma
+            }
+            col.appendChild(subp);
         });
         row.appendChild(col);
         
